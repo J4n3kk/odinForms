@@ -1,9 +1,27 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    color: var(--text-color);
+    --background-color: black;
+    --text-color: white;
+    font-family: myFirstFont;
+}
+
+html {
+    background-color: var(--background-color);
+}
+
 body {
-    width: 100vw;
-    height: 100vh;
+
+    width: auto;
+    height: 98vh;
     display: flex;
     flex-direction: row;
+    padding-top: 200px;
 }
+
+
 body div {
     display: flex;
     flex-direction: column;
@@ -11,23 +29,115 @@ body div {
 
 .left-image {
     width: 40%;
-    background-image: url(images/background2.jpg);
-    background-size: cover;
 }
 
-.content-wrap{
+
+.content-wrap {
     width: 60%;
-    background-color: rgb(251 188 105)
+    background-color: var(--background-color);
+    padding-right: 400px;
+}
+
+.background {
+    background-image: url(images/background2.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    box-shadow: 0 0 100px 180px black inset;
+    width: 40vw;
+    height: 90vh;
+}
+
+.background>img {
+    box-shadow: 0 0 200px 200px black inset;
 }
 
 .logo-wrapper {
-    background-color: rgba(251, 188, 105, 0.30) ;
+    display: flex;
+    position: absolute;
     height: 20%;
+    width: inherit;
     align-items: center;
-    margin-top: 70px;
+    justify-content: center;
+    margin-top: -30px;
+    flex-direction: row;
+    font-size: 40px;
+    color: white;
+
 }
 
-.logo-wrapper img{
-    width: 18%;
-    margin-top: 10px;
+li {
+    display: flex;
+    flex-direction: row;
+    column-gap: 20px;
+    row-gap: 20px;
+    padding: 3px 3px;
+}
+
+li>div {
+    display: flex;
+    flex-direction: column;
+}
+
+ul {
+    padding: 20px;
+    margin: 30px 0px;
+}
+
+input {
+    background-color: var(--background-color);
+    border: 1px solid var(--text-color);
+    border-radius: 5px;
+    font-size: 25px;
+}
+
+.logo-wrapper img {
+    height: 80%;
+}
+
+
+:placeholder-shown:invalid {
+    border-color: var(--text-color);
+}
+
+:not(:placeholder-shown):invalid {
+    border-color: red;
+}
+
+:not(:placeholder-shown):valid {
+    border-color: greenyellow;
+}
+
+form :focus:invalid {
+    border-color: blue;
+}
+
+:focus {
+    border-color: blue;
+}
+
+@font-face {
+    font-family: myFirstFont;
+    src: url(fonts/Quicksand-Light.woff);
+}
+
+button {
+    border: 1px solid var(--text-color);
+    background-color: black;
+    border-radius: 20px;
+    padding: 7px;
+    font-size: 30px;
+}
+
+button:hover {
+    background-color: greenyellow;
+}
+
+.header {
+    font-size: 30px;
+}
+
+.form {
+    font-size: 25px;
+    padding-top: 20px;
 }
